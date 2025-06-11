@@ -4,7 +4,7 @@
 
 描画や注釈を行うための[drauu](https://github.com/antfu/drauu)を内蔵しており、プレゼンテーションをさらに充実させることができます。
 
-ツールバーの<carbon-pen class="inline-icon-btn"/>アイコンをクリックして、描画を開始します。 [プレゼンターモード](/guide/presenter-mode)でも使用可能です。作成した描画や注釈は、全インスタンスでリアルタイムに**同期**されます。
+ツールバーの<carbon-pen class="inline-icon-btn"/>アイコンをクリックして、描画を開始します。 [プレゼンターモード](/guide/ui#presenter-mode)でも使用可能です。作成した描画や注釈は、全インスタンスでリアルタイムに**同期**されます。
 
 <Tweet id="1424027510342250499" />
 
@@ -18,7 +18,7 @@
 
 ```md
 ---
-drawings: 
+drawings:
   persist: true
 ---
 ```
@@ -29,7 +29,7 @@ drawings:
 
 ```md
 ---
-drawings: 
+drawings:
   enabled: false
 ---
 ```
@@ -38,7 +38,7 @@ drawings:
 
 ```md
 ---
-drawings: 
+drawings:
   enabled: dev
 ---
 ```
@@ -47,7 +47,7 @@ drawings:
 
 ```md
 ---
-drawings: 
+drawings:
   presenterOnly: true
 ---
 ```
@@ -58,11 +58,9 @@ drawings:
 
 ```md
 ---
-drawings: 
+drawings:
   syncAll: false
 ---
 ```
 
 この設定により、プレゼンターのインスタンスからの描画のみ、他のインスタンスと同期することができるようになります。
-
-
