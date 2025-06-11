@@ -1,4 +1,4 @@
-name: Auto Sync
+name: Patches Dir Auto Sync
 
 on:
   schedule:
@@ -22,10 +22,10 @@ jobs:
           fetch-depth: 0
 
       - name: Extract docs
-        run: git filter-repo --subdirectory-filter docs --force
+        run: git filter-repo --subdirectory-filter patches --force
 
       - name: Push changes
         uses: ad-m/github-push-action@v0.8.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: refs/heads/upstream
+          branch: refs/heads/utils/patches
