@@ -1,0 +1,8 @@
+[submodule "packages"]
+	path = packages
+	url = https://github.com/yuito-it/slidevjs-docs-ja.git
+	branch = utils/packages
+[submodule "patches"]
+	path = patches
+	url = https://github.com/yuito-it/slidevjs-docs-ja.git
+	branch = utils/patches
