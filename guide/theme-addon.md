@@ -55,7 +55,7 @@ To use an addon, you can add the `addons` option in your [headmatter](../custom/
 ---
 addons:
   - excalidraw
-  - '@slidev/plugin-notes'
+  - "@slidev/plugin-notes"
 ---
 ```
 

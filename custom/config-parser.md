@@ -27,20 +27,19 @@ The preparser (step 1 above) is highly extensible and allows you to implement cu
 To customize it, create a `./setup/preparser.ts` file with the following content:
 
 ```ts twoslash [./setup/preparser.ts]
-import { definePreparserSetup } from '@slidev/types'
+import { definePreparserSetup } from "@slidev/types";
 
 export default definePreparserSetup(({ filepath, headmatter, mode }) => {
   return [
     {
       transformRawLines(lines) {
         for (const i in lines) {
-          if (lines[i] === '@@@')
-            lines[i] = 'HELLO'
+          if (lines[i] === "@@@") lines[i] = "HELLO";
         }
       },
-    }
-  ]
-})
+    },
+  ];
+});
 ```
 
 This example systematically replaces any `@@@` line with a line with `hello`. It illustrates the structure of a preparser configuration file and some of the main concepts the preparser involves:
@@ -64,57 +63,54 @@ Imagine a situation where (part of) your presentation is mainly showing cover im
 
 ```md
 @cover: /nice.jpg
+
 # Welcome
+
 @src: page1.md
 @src: page2.md
 @cover: /break.jpg
 @src: pages3-4.md
 @cover: https://cover.sli.dev
+
 # Questions?
+
 see you next time
 ```
 
 To allow these `@src:` and `@cover:` syntaxes, create a `./setup/preparser.ts` file with the following content:
 
 ```ts twoslash [./setup/preparser.ts]
-import { definePreparserSetup } from '@slidev/types'
+import { definePreparserSetup } from "@slidev/types";
 
 export default definePreparserSetup(() => {
   return [
     {
       transformRawLines(lines) {
-        let i = 0
+        let i = 0;
         while (i < lines.length) {
-          const l = lines[i]
+          const l = lines[i];
           if (l.match(/^@cover:/i)) {
             lines.splice(
               i,
               1,
-              '---',
-              'layout: cover',
-              `background: ${l.replace(/^@cover: */i, '')}`,
-              '---',
-              ''
-            )
-            continue
+              "---",
+              "layout: cover",
+              `background: ${l.replace(/^@cover: */i, "")}`,
+              "---",
+              ""
+            );
+            continue;
           }
           if (l.match(/^@src:/i)) {
-            lines.splice(
-              i,
-              1,
-              '---',
-              `src: ${l.replace(/^@src: */i, '')}`,
-              '---',
-              ''
-            )
-            continue
+            lines.splice(i, 1, "---", `src: ${l.replace(/^@src: */i, "")}`, "---", "");
+            continue;
           }
-          i++
+          i++;
         }
-      }
+      },
     },
-  ]
-})
+  ];
+});
 ```
 
 And that's it.
@@ -137,8 +133,9 @@ _scale: 0.75
 > great!
 
 ---
-_scale: 4
----
+
+## \_scale: 4
+
 # Break
 
 ---
@@ -146,10 +143,14 @@ _scale: 4
 # Ok
 
 ---
+
 layout: center
-_scale: 2.5
+\_scale: 2.5
+
 ---
+
 # Questions?
+
 see you next time
 ```
 
@@ -158,25 +159,21 @@ Here we used an underscore in `_scale` to avoid possible conflicts with existing
 To handle this `_scale: ...` syntax in the frontmatter, create a `./setup/preparser.ts` file with the following content:
 
 ```ts twoslash [./setup/preparser.ts]
-import { definePreparserSetup } from '@slidev/types'
+import { definePreparserSetup } from "@slidev/types";
 
 export default definePreparserSetup(() => {
   return [
     {
       async transformSlide(content, frontmatter) {
-        if ('_scale' in frontmatter) {
-          return [
-            `<Transform :scale=${frontmatter._scale}>`,
-            '',
-            content,
-            '',
-            '</Transform>'
-          ].join('\n')
+        if ("_scale" in frontmatter) {
+          return [`<Transform :scale=${frontmatter._scale}>`, "", content, "", "</Transform>"].join(
+            "\n"
+          );
         }
       },
     },
-  ]
-})
+  ];
+});
 ```
 
 And that's it.
@@ -208,25 +205,23 @@ Here we used an underscore in `_note` to avoid possible conflicts with existing 
 To handle this `_note: ...` syntax in the frontmatter, create a `./setup/preparser.ts` file with the following content:
 
 ```ts twoslash [./setup/preparser.ts]
-import fs, { promises as fsp } from 'node:fs'
-import { definePreparserSetup } from '@slidev/types'
+import fs, { promises as fsp } from "node:fs";
+import { definePreparserSetup } from "@slidev/types";
 
 export default definePreparserSetup(() => {
   return [
     {
       async transformNote(note, frontmatter) {
-        if ('_note' in frontmatter && fs.existsSync(frontmatter._note)) {
+        if ("_note" in frontmatter && fs.existsSync(frontmatter._note)) {
           try {
-            const newNote = await fsp.readFile(frontmatter._note, 'utf8')
-            return newNote
-          }
-          catch (err) {
-          }
+            const newNote = await fsp.readFile(frontmatter._note, "utf8");
+            return newNote;
+          } catch (err) {}
         }
 
-        return note
+        return note;
       },
     },
-  ]
-})
+  ];
+});
 ```

@@ -11,17 +11,17 @@ description: |
 Slidev provides a set of hooks to help you manage the slide lifecycle:
 
 ```ts twoslash
-import { onSlideEnter, onSlideLeave, useIsSlideActive } from '@slidev/client'
+import { onSlideEnter, onSlideLeave, useIsSlideActive } from "@slidev/client";
 
-const isActive = useIsSlideActive()
+const isActive = useIsSlideActive();
 
 onSlideEnter(() => {
   /* Called whenever the slide becomes active */
-})
+});
 
 onSlideLeave(() => {
   /* Called whenever the slide becomes inactive */
-})
+});
 ```
 
 You can also use <LinkInline link="guide/global-context" /> to access other useful context information.

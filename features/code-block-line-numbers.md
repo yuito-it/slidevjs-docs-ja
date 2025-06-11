@@ -14,11 +14,8 @@ You can also set the starting line for each code block and highlight the lines a
 
 ````md
 ```ts {6,7}{lines:true,startLine:5}
-function add(
-  a: Ref<number> | number,
-  b: Ref<number> | number
-) {
-  return computed(() => unref(a) + unref(b))
+function add(a: Ref<number> | number, b: Ref<number> | number) {
+  return computed(() => unref(a) + unref(b));
 }
 ```
 ````

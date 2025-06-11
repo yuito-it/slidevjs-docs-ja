@@ -9,15 +9,15 @@ Create `./setup/main.ts` with the following content:
 <!-- eslint-disable import/first -->
 
 ```ts twoslash [setup/main.ts]
-import type { Plugin } from 'vue'
-declare const YourPlugin: Plugin
+import type { Plugin } from "vue";
+declare const YourPlugin: Plugin;
 // ---cut---
-import { defineAppSetup } from '@slidev/types'
+import { defineAppSetup } from "@slidev/types";
 
 export default defineAppSetup(({ app, router }) => {
   // Vue App
-  app.use(YourPlugin)
-})
+  app.use(YourPlugin);
+});
 ```
 
 This can also be used as the main entrance of your Slidev app to do some initializations before the app starts.

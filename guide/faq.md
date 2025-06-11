@@ -21,7 +21,7 @@ However, relative paths in frontmatter and other components will be broken after
 
 ```md
 ---
-background: ./image.png  # Broken after build
+background: ./image.png # Broken after build
 ---
 
 <Comp src="./image.png" />

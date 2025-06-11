@@ -5,11 +5,11 @@
 Create `./setup/monaco.ts` with the following content:
 
 ```ts twoslash [./setup/monaco.ts]
-import { defineMonacoSetup } from '@slidev/types'
+import { defineMonacoSetup } from "@slidev/types";
 
 export default defineMonacoSetup(async (monaco) => {
   // use `monaco` to configure
-})
+});
 ```
 
 Learn more about [configuring Monaco](https://github.com/Microsoft/monaco-editor).
@@ -20,10 +20,10 @@ When using TypeScript with Monaco, types for dependencies will be installed to t
 
 ````md
 ```ts {monaco}
-import { ref } from 'vue'
-import { useMouse } from '@vueuse/core'
+import { ref } from "vue";
+import { useMouse } from "@vueuse/core";
 
-const counter = ref(0)
+const counter = ref(0);
 ```
 ````
 
@@ -65,22 +65,22 @@ If you would like to customize the Monaco editor you may pass an `editorOptions`
 
 ````md
 ```ts {monaco} { editorOptions: { wordWrap:'on'} }
-console.log('HelloWorld')
+console.log("HelloWorld");
 ```
 ````
 
 Alternatively if you would like these options to be applied to every Monaco instance, you can return them in the `defineMonacoSetup` function
 
 ```ts twoslash [./setup/monaco.ts]
-import { defineMonacoSetup } from '@slidev/types'
+import { defineMonacoSetup } from "@slidev/types";
 
 export default defineMonacoSetup(() => {
   return {
     editorOptions: {
-      wordWrap: 'on'
-    }
-  }
-})
+      wordWrap: "on",
+    },
+  };
+});
 ```
 
 ## Disabling

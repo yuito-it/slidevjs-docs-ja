@@ -21,7 +21,7 @@
   @apply bg-[#161618] border border-gray-400 border-opacity-10;
 }
 .demo-editor::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 12px;
   left: 10px;

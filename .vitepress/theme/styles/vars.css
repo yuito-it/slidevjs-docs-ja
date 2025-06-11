@@ -50,7 +50,7 @@
   --vp-c-brand-soft: #3ab9d450;
   --vp-c-bg-alt: #f9f9f9;
 
-  --vp-font-family-mono: theme('fontFamily.mono');
+  --vp-font-family-mono: theme("fontFamily.mono");
 }
 
 .dark {

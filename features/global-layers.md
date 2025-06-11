@@ -42,7 +42,11 @@ The text `Your Name` will appear on all your slides.
 ```html
 <!-- custom-nav-controls -->
 <template>
-  <button class="icon-btn" title="Next" @click="$nav.next">
+  <button
+    class="icon-btn"
+    title="Next"
+    @click="$nav.next"
+  >
     <div class="i-carbon:arrow-right" />
   </button>
 </template>
@@ -92,7 +96,12 @@ To enable it conditionally, you can use the <LinkInline link="guide/global-conte
 <!-- custom-nav-controls -->
 <!-- hide the button in Presenter model -->
 <template>
-  <button v-if="!$nav.isPresenter" class="icon-btn" title="Next" @click="$nav.next">
+  <button
+    v-if="!$nav.isPresenter"
+    class="icon-btn"
+    title="Next"
+    @click="$nav.next"
+  >
     <div class="i-carbon:arrow-right" />
   </button>
 </template>

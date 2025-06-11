@@ -17,14 +17,7 @@ Slidev also adds shortcuts as can be seen in its [source code](https://github.co
 You can therefore style your content the way you want. For example:
 
 ```html
-<div class="grid pt-4 gap-4 grid-cols-[100px,1fr]">
-
-### Name
-
-- Item 1
-- Item 2
-
-</div>
+<div class="grid pt-4 gap-4 grid-cols-[100px,1fr]">### Name - Item 1 - Item 2</div>
 ```
 
 ## Configurations
@@ -32,15 +25,15 @@ You can therefore style your content the way you want. For example:
 You can create `uno.config.ts` under the root of your project to extend the builtin configurations
 
 ```ts twoslash [uno.config.ts]
-import { defineConfig } from 'unocss'
+import { defineConfig } from "unocss";
 
 export default defineConfig({
   shortcuts: {
     // custom the default background
-    'bg-main': 'bg-white text-[#181818] dark:(bg-[#121212] text-[#ddd])',
+    "bg-main": "bg-white text-[#181818] dark:(bg-[#121212] text-[#ddd])",
   },
   // ...
-})
+});
 ```
 
 Learn more about [UnoCSS configurations](https://unocss.dev/guide/config-file)

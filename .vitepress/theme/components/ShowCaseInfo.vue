@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { ShowCaseInfo } from '../../showcases'
+import type { ShowCaseInfo } from "../../showcases";
 
 defineProps<{
-  info: ShowCaseInfo
-}>()
+  info: ShowCaseInfo;
+}>();
 </script>
 
 <template>
@@ -15,13 +15,15 @@ defineProps<{
         :href="info.slidesLink"
         target="_blank"
       >
-        <img :src="info.cover">
+        <img :src="info.cover" />
       </a>
     </div>
     <div class="font-bold line-clamp-2">
       {{ info.title }}
     </div>
-    <div class="text-current text-xs opacity-75 whitespace-nowrap overflow-hidden overflow-ellipsis">
+    <div
+      class="text-current text-xs opacity-75 whitespace-nowrap overflow-hidden overflow-ellipsis"
+    >
       {{ info.at }}
     </div>
     <div class="flex-auto" />
@@ -31,8 +33,12 @@ defineProps<{
         :href="info.author.link"
         class="text-current! text-sm opacity-50 whitespace-nowrap overflow-hidden overflow-ellipsis"
         target="_blank"
-      >{{ info.author.name }}</a>
-      <div v-else class="text-current! text-sm opacity-50 whitespace-nowrap overflow-hidden overflow-ellipsis">
+        >{{ info.author.name }}</a
+      >
+      <div
+        v-else
+        class="text-current! text-sm opacity-50 whitespace-nowrap overflow-hidden overflow-ellipsis"
+      >
         {{ info.author.name }}
       </div>
       <div class="flex-auto" />

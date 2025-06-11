@@ -1,20 +1,23 @@
 <script setup lang="ts">
-import { Tooltip } from 'floating-vue'
-import { withBase } from 'vitepress'
-import { computed } from 'vue'
-import { resolveLink } from '../../utils'
+import { Tooltip } from "floating-vue";
+import { withBase } from "vitepress";
+import { computed } from "vue";
+import { resolveLink } from "../../utils";
 
 const props = defineProps<{
-  link: string
-}>()
+  link: string;
+}>();
 
-const resolved = computed(() => resolveLink(props.link))
+const resolved = computed(() => resolveLink(props.link));
 </script>
 
 <template>
   <span class="sr-only">{{ resolved.title }}</span>
   <ClientOnly>
-    <Tooltip class="inline-block" theme="twoslash">
+    <Tooltip
+      class="inline-block"
+      theme="twoslash"
+    >
       <a
         :href="withBase(resolved.url)"
         target="_blank"
@@ -27,16 +30,32 @@ const resolved = computed(() => resolveLink(props.link))
         <a
           :href="withBase(resolved.url)"
           target="_blank"
-          flex flex-col p4 gap-2 max-w-100
+          flex
+          flex-col
+          p4
+          gap-2
+          max-w-100
         >
-          <div flex gap-2>
+          <div
+            flex
+            gap-2
+          >
             <div>
               {{ resolved.title }}
             </div>
             <div flex-grow />
-            <FeatureTag v-for="tag in resolved.tags" :key="tag" :tag :noclick="resolved.kind !== 'features'" text-xs />
+            <FeatureTag
+              v-for="tag in resolved.tags"
+              :key="tag"
+              :tag
+              :noclick="resolved.kind !== 'features'"
+              text-xs
+            />
           </div>
-          <div op75 text-sm>
+          <div
+            op75
+            text-sm
+          >
             {{ resolved.descripton }}
           </div>
         </a>

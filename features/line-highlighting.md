@@ -13,11 +13,8 @@ To highlight specific lines, simply add line numbers within brackets `{}`. Line 
 
 ````md
 ```ts {2,3}
-function add(
-  a: Ref<number> | number,
-  b: Ref<number> | number
-) {
-  return computed(() => unref(a) + unref(b))
+function add(a: Ref<number> | number, b: Ref<number> | number) {
+  return computed(() => unref(a) + unref(b));
 }
 ```
 ````
@@ -28,11 +25,8 @@ To change what's highlighted with multiple clicks, you can use `|` to separate e
 
 ````md
 ```ts {2-3|5|all}
-function add(
-  a: Ref<number> | number,
-  b: Ref<number> | number
-) {
-  return computed(() => unref(a) + unref(b))
+function add(a: Ref<number> | number, b: Ref<number> | number) {
+  return computed(() => unref(a) + unref(b));
 }
 ```
 ````
@@ -43,11 +37,8 @@ You can set the line number to `hide` to hide the code block or `none` to not hi
 
 ````md
 ```ts {hide|none}
-function add(
-  a: Ref<number> | number,
-  b: Ref<number> | number
-) {
-  return computed(() => unref(a) + unref(b))
+function add(a: Ref<number> | number, b: Ref<number> | number) {
+  return computed(() => unref(a) + unref(b));
 }
 ```
 ````

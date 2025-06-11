@@ -44,5 +44,5 @@ Note that you can use `{*}` as a placeholder of <LinkInline link="features/line-
 <!-- eslint-skip -->
 
 ```md
-<<< @/snippets/snippet.js {*}{lines:true}
+<<< @/snippets/snippet.js {\*}{lines:true}
 ```

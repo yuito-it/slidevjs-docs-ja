@@ -9,19 +9,19 @@ Slidev uses [Shiki](https://github.com/shikijs/shiki) as the code highlighter. I
 Create `./setup/shiki.ts` file with the following content:
 
 ```ts twoslash [setup/shiki.ts]
-import { defineShikiSetup } from '@slidev/types'
+import { defineShikiSetup } from "@slidev/types";
 
 export default defineShikiSetup(() => {
   return {
     themes: {
-      dark: 'min-dark',
-      light: 'min-light',
+      dark: "min-dark",
+      light: "min-light",
     },
     transformers: [
       // ...
     ],
-  }
-})
+  };
+});
 ```
 
 If you want to add custom theme or language (TextMate grammar/themes in JSON), you can import them in the setup file:
@@ -29,34 +29,34 @@ If you want to add custom theme or language (TextMate grammar/themes in JSON), y
 <!-- eslint-disable import/first-->
 
 ```ts twoslash [setup/shiki.ts]
-import { defineShikiSetup } from '@slidev/types'
+import { defineShikiSetup } from "@slidev/types";
 // ---cut-start---
 // @ts-expect-error missing types
 // ---cut-end---
-import customLanguage from './customLanguage.tmLanguage.json'
+import customLanguage from "./customLanguage.tmLanguage.json";
 // ---cut-start---
 // @ts-expect-error missing types
 // ---cut-end---
-import customTheme from './customTheme.tmTheme.json'
+import customTheme from "./customTheme.tmTheme.json";
 
 export default defineShikiSetup(() => {
   return {
     themes: {
       dark: customTheme,
-      light: 'min-light',
+      light: "min-light",
     },
     langs: [
-      'js',
-      'typescript',
-      'cpp',
+      "js",
+      "typescript",
+      "cpp",
       customLanguage,
       // ...
     ],
     transformers: [
       // ...
     ],
-  }
-})
+  };
+});
 ```
 
 Check [Built-in languages](https://shiki.style/languages) and [Built-in themes](https://shiki.style/themes), and refer to [Shiki's docs](https://shiki.style) for more details.

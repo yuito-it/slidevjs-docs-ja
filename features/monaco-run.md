@@ -17,9 +17,9 @@ Slidev also provides the Monaco Runner Editor, which allows you to run the code 
 ````md
 ```ts {monaco-run}
 function distance(x: number, y: number) {
-  return Math.sqrt(x ** 2 + y ** 2)
+  return Math.sqrt(x ** 2 + y ** 2);
 }
-console.log(distance(3, 4))
+console.log(distance(3, 4));
 ```
 ````
 
@@ -29,7 +29,7 @@ By default it will automatically run the code when the slide is loaded; if you w
 
 ````md
 ```ts {monaco-run} {autorun:false}
-console.log('Click the play button to run me')
+console.log("Click the play button to run me");
 ```
 ````
 
@@ -37,7 +37,7 @@ If you want to only show the output in certain clicks, you can use the `showOutp
 
 ````md
 ```ts {monaco-run} {showOutputAt:'+1'}
-console.log('Shown after 1 click')
+console.log("Shown after 1 click");
 ```
 ````
 

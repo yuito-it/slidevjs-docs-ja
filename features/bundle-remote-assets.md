@@ -25,5 +25,8 @@ For local assets, put them into the [`public` folder](/custom/directory-structur
 If you want to apply custom sizes or styles, you can convert them to the `<img>` tag:
 
 ```html
-<img src="/pic.png" class="m-40 h-40 rounded shadow" />
+<img
+  src="/pic.png"
+  class="m-40 h-40 rounded shadow"
+/>
 ```
