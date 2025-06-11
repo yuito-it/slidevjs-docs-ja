@@ -1,4 +1,4 @@
-# Configure Monaco
+# Monacoの設定
 
 <Environment type="client" />
 
@@ -12,7 +12,7 @@ export default defineMonacoSetup(async (monaco) => {
 });
 ```
 
-Learn more about [configuring Monaco](https://github.com/Microsoft/monaco-editor).
+詳細は[configuring Monaco](https://github.com/Microsoft/monaco-editor)を参照してください。
 
 ## TypeScript Types
 

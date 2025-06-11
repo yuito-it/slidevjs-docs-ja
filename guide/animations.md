@@ -231,19 +231,19 @@ clicks: 10
 
 ### Element Transitions {#element-transitions}
 
-When you apply the `v-click` directive to your elements, it will attach the class name `slidev-vclick-target` to it. When the elements are hidden, the class name `slidev-vclick-hidden` will also be attached. For example:
+要素に`v-click`ディレクティブを適用すると、`slidev-vclick-target`というクラス名が付与されます。要素が非表示になった場合、クラス名`slidev-vclick-hidden`が付与されます。例：
 
 ```html
-<div class="slidev-vclick-target slidev-vclick-hidden">Text</div>
+<div class="slidev-vclick-target slidev-vclick-hidden">テキスト</div>
 ```
 
 After a click, it may become:
 
 ```html
-<div class="slidev-vclick-target">Text</div>
+<div class="slidev-vclick-target">テキスト</div>
 ```
 
-By default, a subtle opacity transition is applied to those classes:
+デフォルトでは、これらのクラスにはわずかな透明度のトランジションが適用されます。
 
 ```css
 /* below shows the default style */
@@ -287,7 +287,7 @@ To specify animations for only certain slides or layouts:
 }
 ```
 
-Learn more about [customizing styles](/custom/directory-structure#style).
+詳細は[スタイルのカスタマイズ](/custom/directory-structure#スタイル)を参照してください。
 
 ## Motion {#motion}
 

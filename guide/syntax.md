@@ -104,7 +104,7 @@ layout: cover
 
 # Slide 1
 
-This is the cover page.
+これはカバーページです。
 
 <!-- This is a **note** -->
 
@@ -114,7 +114,7 @@ This is the cover page.
 
 <!-- This is NOT a note because it is not at the end of the slide -->
 
-The second page
+2ページ目
 
 <!--
 This is _another_ note

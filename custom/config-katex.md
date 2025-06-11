@@ -1,8 +1,8 @@
-# Configure KaTeX
+# KaTeXの設定
 
 <Environment type="node" />
 
-Create `./setup/katex.ts` with the following content:
+以下の内容で`./setup/katex.ts`を作成します：
 
 ```ts twoslash [setup/katex.ts]
 import { defineKatexSetup } from "@slidev/types";

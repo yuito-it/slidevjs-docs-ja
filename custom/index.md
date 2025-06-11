@@ -1,4 +1,4 @@
-# Customizations
+# カスタマイズ
 
 Slidev is fully customizable, from styling to tooling configurations. It allows you to configure the tools underneath ([Vite](/custom/config-vite), [UnoCSS](/custom/config-unocss), [Monaco](/custom/config-monaco), etc.)
 

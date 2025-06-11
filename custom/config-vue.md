@@ -22,4 +22,4 @@ export default defineAppSetup(({ app, router }) => {
 
 This can also be used as the main entrance of your Slidev app to do some initializations before the app starts.
 
-Learn more: [Vue Application API](https://v3.vuejs.org/api/application-api.html#component).
+詳細： [アプリケーションAPI](https://v3.ja.vuejs.org/api/application-api.html#component)

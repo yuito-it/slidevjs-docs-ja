@@ -1,4 +1,4 @@
-# Configure Mermaid
+# Mermaidの設定
 
 <Environment type="client" />
 

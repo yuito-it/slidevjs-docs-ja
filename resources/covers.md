@@ -1,6 +1,6 @@
-# Curated Covers
+# キュレーションカバー
 
-We curated a few cover images to demonstrate our starter template.
+スターターテンプレートのデモとして、いくつかのカバー画像をキュレーションしました。
 
 ![](/screenshots/covers.png)
 

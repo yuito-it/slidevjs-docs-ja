@@ -1,47 +1,45 @@
-# Directory Structure
+# ディレクトリ構造
 
-Slidev employs some directory structure conventions to minimize the configuration surface and to make the functionality extensions flexible and intuitive.
+Slidevは設定面を最小化し、機能拡張を柔軟かつ直感的に行うために、いくつかのディレクトリ構造の規約を採用しています。
 
-The conventional directory structure is:
+基本的な構造は以下の通りです：
 
 ```bash
 your-slidev/
-  ├── components/       # custom components
-  ├── layouts/          # custom layouts
-  ├── public/           # static assets
-  ├── setup/            # custom setup / hooks
-  ├── snippets/         # code snippets
-  ├── styles/           # custom style
-  ├── index.html        # injections to index.html
-  ├── slides.md         # the main slides entry
-  └── vite.config.ts    # extending vite config
+  ├── components/       # カスタムコンポーネント
+  ├── layouts/          # カスタムレイアウト
+  ├── public/           # 静的アセット
+  ├── setup/            # カスタムセットアップ/フック
+  ├── styles/           # カスタムスタイル
+  ├── index.html        # index.htmlへのインジェクション
+  ├── slides.md         # メインスライド
+  └── vite.config.ts   # 拡張されたviteの設定
 ```
 
-All of them are optional.
+すべてオプションです。
 
-## Components
+## コンポーネント
 
-Pattern: `./components/*.{vue,js,ts,jsx,tsx,md}`
+正規表現： `./components/*.{vue,js,ts,jsx,tsx,md}`
 
 <LinkCard link="guide/component" />
 
-## Layouts
+## レイアウト
 
-Pattern: `./layouts/*.{vue,js,ts,jsx,tsx}`
-
+正規表現： `./layouts/*.{vue,js,ts,jsx,tsx}`
 <LinkCard link="guide/layout" />
 
-## Public
+## 静的アセット
 
-Pattern: `./public/*`
+規約： `./public/*`
 
-Assets in this directory will be served at root path `/` during dev, and copied to the root of the dist directory as-is. Read more about [Assets Handling](../guide/faq#assets-handling).
+このディレクトリに配置されているアセットは、開発中はルートパス`/`で提供され、そのままdistディレクトリのルートにコピーされます。詳細は[Vite's `public` directory](https://vitejs.dev/guide/assets.html#the-public-directory)を参照してください。
 
-## Style
+## スタイル
 
-Pattern: `./style.css` | `./styles/index.{css,js,ts}`
+正規表現： `./style.css` | `./styles/index.{css,js,ts}`
 
-Files following this convention will be injected to the App root. If you need to import multiple CSS entries, you can create the following structure and manage the import order yourself.
+このパターンに従って配置されたファイルは、Appのルートに挿入されます。複数のCSSをインポートする必要がある場合は、以下のような構造を作成し、インポートの順序を自分で管理することができます。
 
 ```bash
 your-slidev/
@@ -61,9 +59,7 @@ import "./code.css";
 import "./layouts.css";
 ```
 
-Styles will be processed by [UnoCSS](https://unocss.dev/) and [PostCSS](https://postcss.org/), so you can use CSS nesting and [at-directives](https://unocss.dev/transformers/directives#apply) and Nested CSS out-of-box. For example:
-
-<!-- eslint-skip -->
+スタイルは[Windi CSS](http://windicss.org/)と[PostCSS](https://postcss.org/)で処理されるため、CSSのネストや[at-directives](https://windicss.org/features/directives.html)をそのまま使用することができます。例：
 
 ```css
 .slidev-layout {
@@ -89,15 +85,15 @@ Styles will be processed by [UnoCSS](https://unocss.dev/) and [PostCSS](https://
 }
 ```
 
-Learn more about the syntax [here](https://unocss.dev/transformers/directives#apply).
+[シンタックスについて詳しく学ぶ](https://windicss.org/features/directives.html)
 
 ## `index.html`
 
-Pattern: `index.html`
+正規表現： `index.html`
 
-The `index.html` provides the ability to inject meta tags and/or scripts to the main `index.html`
+`index.html`はメインの`index.html`にmeteタグやscriptを挿入する機能を提供します。
 
-For example, for the following custom `index.html`:
+例えば、次のようなカスタム`index.html`の場合：
 
 ```html [index.html]
 <head>
@@ -116,7 +112,7 @@ For example, for the following custom `index.html`:
 </body>
 ```
 
-The final hosted `index.html` will be:
+最終的にホストされる`index.html`は次のようになります。
 
 ```html
 <!DOCTYPE html>
@@ -132,7 +128,7 @@ The final hosted `index.html` will be:
       type="image/png"
       href="https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/favicon.png"
     />
-    <!-- injected head -->
+    <!-- 挿入されたhead -->
     <link
       rel="preconnect"
       href="https://fonts.gstatic.com"
@@ -148,14 +144,14 @@ The final hosted `index.html` will be:
       type="module"
       src="__ENTRY__"
     ></script>
-    <!-- injected body -->
+    <!-- 挿入されたbody -->
     <script src="./your-scripts"></script>
   </body>
 </html>
 ```
 
-## Global Layers
+## グローバルレイヤー
 
-Pattern: `global-top.vue` | `global-bottom.vue` | `custom-nav-controls.vue` | `slide-top.vue` | `slide-bottom.vue`
+正規表現： `global-top.vue` | `global-bottom.vue` | `custom-nav-controls.vue` | `slide-top.vue` | `slide-bottom.vue`
 
 <LinkCard link="features/global-layers" />
