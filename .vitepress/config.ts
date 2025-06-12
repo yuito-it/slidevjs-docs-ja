@@ -10,7 +10,7 @@ import { getSidebarObject } from "./sidebar-gen";
 
 export const slidebars: DefaultTheme.SidebarItem[] = [
   {
-    text: "Guide",
+    text: "ガイド",
     items: Guides,
   },
   {
@@ -18,7 +18,7 @@ export const slidebars: DefaultTheme.SidebarItem[] = [
     items: Advanced,
   },
   {
-    text: "Customizations",
+    text: "カスタマイズ",
     items: Customizations,
   },
   {
@@ -26,7 +26,7 @@ export const slidebars: DefaultTheme.SidebarItem[] = [
     items: BuiltIn,
   },
   {
-    text: "Resources",
+    text: "リソース",
     items: Resources,
   },
 ];
@@ -90,34 +90,34 @@ export default defineConfig({
 
     nav: [
       {
-        text: "📖 Guide",
+        text: "📖 ガイド",
         items: [
           ...Guides,
           {
-            text: "Advanced",
+            text: "高度な機能",
             items: Advanced,
           },
         ],
       },
       {
-        text: "✨ Features",
+        text: "✨ 機能",
         link: "/features/",
       },
       {
-        text: "Reference",
+        text: "リファレンス",
         items: [
           {
             text: "Built-in",
             items: BuiltIn,
           },
           {
-            text: "Customize",
+            text: "カスタマイズ",
             items: Customizations,
           },
         ],
       },
       {
-        text: "Resources",
+        text: "リソース",
         items: Resources,
       },
     ],
