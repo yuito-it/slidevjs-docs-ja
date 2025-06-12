@@ -37,12 +37,12 @@
         <a
           href="/guide/"
           class="bg-$vp-c-brand-3 text-white! no-underline! px5 py3 text-xl font-bold rounded-xl hover:bg-$vp-c-brand-1 h-max"
-          >Get Started</a
+          >はじめる</a
         >
         <a
           href="/guide/why"
           class="bg-$vp-c-gray-1 text-white! no-underline! px5 py3 text-xl font-bold rounded-2xl hover:bg-$vp-c-brand-1 h-max"
-          >Why</a
+          >なぜSlidevがいいのかを知る</a
         >
       </div>
     </div>
