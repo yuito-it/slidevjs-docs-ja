@@ -149,11 +149,15 @@ export default defineConfig({
 
   locales: {
     root: {
-      label: `English (v${version})`,
+      label: `日本語 (v${version})`,
     },
     zh: {
       label: "简体中文",
       link: "https://cn.sli.dev/",
+    },
+    en: {
+      label: "English",
+      link: "https://sli.dev/",
     },
   },
 });
