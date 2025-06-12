@@ -1,10 +1,9 @@
 # [sli.dev](https://sli.dev)
 
-> [!WARNING]
->
-> This translation is out-dated and not maintained. Please refer to the [English documentation](https://sli.dev) instead.
+> [!IMPORTANT]
+> このドキュメントは現在メンテナンスから外れており、復旧中です。
 
-[Slidev](https://github.com/slidevjs/slidev)の日本語ドキュメントです
+[Slidev](https://github.com/slidevjs/slidev) の日本語ドキュメントです。
 
 ## All Translations
 
@@ -42,13 +41,6 @@ pnpm run dev
 ## 翻訳に貢献する
 
 [TRANSLATIONS.md](/TRANSLATIONS.md) をご一読ください
-
-# [sli.dev](https://sli.dev)
-
-> [!IMPORTANT]
-> このドキュメントは現在メンテナンスから外れており、復旧中です。
-
-[Slidev](https://github.com/slidevjs/slidev) の日本語ドキュメントです。
 
 ## Translations
 
