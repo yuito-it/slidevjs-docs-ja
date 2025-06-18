@@ -1,66 +1,66 @@
 export default [
   {
-    text: 'Configurations',
-    link: '/custom/',
+    text: "設定",
+    link: "/custom/",
   },
   {
-    text: 'Directory Structure',
-    link: '/custom/directory-structure',
+    text: "ディレクトリ構成",
+    link: "/custom/directory-structure",
   },
   {
-    text: 'Configure Highlighter',
-    link: '/custom/config-highlighter',
+    text: "ハイライターの設定",
+    link: "/custom/config-highlighter",
   },
   {
-    text: 'Configure Vite and Plugins',
-    link: '/custom/config-vite',
+    text: "Viteとプラグインの設定",
+    link: "/custom/config-vite",
   },
   {
-    text: 'Configure Vue App',
-    link: '/custom/config-vue',
+    text: "Vueアプリの設定",
+    link: "/custom/config-vue",
   },
   {
-    text: 'Configure UnoCSS',
-    link: '/custom/config-unocss',
+    text: "UnoCSSの設定",
+    link: "/custom/config-unocss",
   },
   {
-    text: 'Configure Code Runners',
-    link: '/custom/config-code-runners',
+    text: "コードランナーの設定",
+    link: "/custom/config-code-runners",
   },
   {
-    text: 'Configure Transformers',
-    link: '/custom/config-transformers',
+    text: "トランスフォーマーの設定",
+    link: "/custom/config-transformers",
   },
   {
-    text: 'Configure Monaco',
-    link: '/custom/config-monaco',
+    text: "Monacoの設定",
+    link: "/custom/config-monaco",
   },
   {
-    text: 'Configure KaTeX',
-    link: '/custom/config-katex',
+    text: "KaTeXの設定",
+    link: "/custom/config-katex",
   },
   {
-    text: 'Configure Mermaid',
-    link: '/custom/config-mermaid',
+    text: "Mermaidの設定",
+    link: "/custom/config-mermaid",
   },
   {
-    text: 'Configure Routes',
-    link: '/custom/config-routes',
+    text: "ルートの設定",
+    link: "/custom/config-routes",
   },
   {
-    text: 'Configure Shortcuts',
-    link: '/custom/config-shortcuts',
+    text: "ショートカットの設定",
+    link: "/custom/config-shortcuts",
   },
   {
-    text: 'Configure Context Menu',
-    link: '/custom/config-context-menu',
+    text: "コンテキストメニューの設定",
+    link: "/custom/config-context-menu",
   },
   {
-    text: 'Configure Fonts',
-    link: '/custom/config-fonts',
+    text: "フォントの設定",
+    link: "/custom/config-fonts",
   },
   {
-    text: 'Configure Pre-Parser',
-    link: '/custom/config-parser',
+    text: "プリパーサーの設定",
+    link: "/custom/config-parser",
   },
-]
+];
