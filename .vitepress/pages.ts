@@ -1,107 +1,107 @@
 export const Guides = [
   {
-    text: 'Why Slidev',
-    link: '/guide/why',
+    text: "なぜSlidevなのか",
+    link: "/guide/why",
   },
   {
-    text: 'Getting Started',
-    link: '/guide/',
+    text: "はじめに",
+    link: "/guide/",
   },
   {
-    text: 'Syntax Guide',
-    link: '/guide/syntax',
+    text: "構文ガイド",
+    link: "/guide/syntax",
   },
   {
-    text: 'User Interface',
-    link: '/guide/ui',
+    text: "ユーザーインターフェース",
+    link: "/guide/ui",
   },
   {
-    text: 'Animations',
-    link: '/guide/animations',
+    text: "アニメーション",
+    link: "/guide/animations",
   },
   {
-    text: 'Theme & Addons',
-    link: '/guide/theme-addon',
+    text: "テーマとアドオン",
+    link: "/guide/theme-addon",
   },
   {
-    text: 'Components',
-    link: '/guide/component',
+    text: "コンポーネント",
+    link: "/guide/component",
   },
   {
-    text: 'Layouts',
-    link: '/guide/layout',
+    text: "レイアウト",
+    link: "/guide/layout",
   },
   {
-    text: 'Exporting',
-    link: '/guide/exporting',
+    text: "エクスポート",
+    link: "/guide/exporting",
   },
   {
-    text: 'Hosting',
-    link: '/guide/hosting',
+    text: "ホスティング",
+    link: "/guide/hosting",
   },
   {
-    text: 'FAQ',
-    link: '/guide/faq',
+    text: "よくある質問",
+    link: "/guide/faq",
   },
-]
+];
 
 export const BuiltIn = [
   {
-    text: 'CLI',
-    link: '/builtin/cli',
+    text: "CLI",
+    link: "/builtin/cli",
   },
   {
-    text: 'Components',
-    link: '/builtin/components',
+    text: "組み込みコンポーネント",
+    link: "/builtin/components",
   },
   {
-    text: 'Layouts',
-    link: '/builtin/layouts',
+    text: "組み込みレイアウト",
+    link: "/builtin/layouts",
   },
-]
+];
 
 export const Advanced = [
   {
-    text: 'Global Context',
-    link: '/guide/global-context',
+    text: "グローバルコンテキスト",
+    link: "/guide/global-context",
   },
   {
-    text: 'Writing Layouts',
-    link: '/guide/write-layout',
+    text: "レイアウトの作成",
+    link: "/guide/write-layout",
   },
   {
-    text: 'Writing Themes',
-    link: '/guide/write-theme',
+    text: "テーマの作成",
+    link: "/guide/write-theme",
   },
   {
-    text: 'Writing Addons',
-    link: '/guide/write-addon',
+    text: "アドオンの作成",
+    link: "/guide/write-addon",
   },
-]
+];
 
 export const Resources = [
   {
-    text: 'Showcases',
-    link: '/resources/showcases',
+    text: "ショーケース",
+    link: "/resources/showcases",
   },
   {
-    text: 'Theme Gallery',
-    link: '/resources/theme-gallery',
+    text: "テーマギャラリー",
+    link: "/resources/theme-gallery",
   },
   {
-    text: 'Addon Gallery',
-    link: '/resources/addon-gallery',
+    text: "アドオンギャラリー",
+    link: "/resources/addon-gallery",
   },
   {
-    text: 'Learning Resources',
-    link: '/resources/learning',
+    text: "学習リソース",
+    link: "/resources/learning",
   },
   {
-    text: 'Curated Covers',
-    link: '/resources/covers',
+    text: "キューレーションカバー",
+    link: "/resources/covers",
   },
   {
-    text: 'Release Notes',
-    link: 'https://github.com/slidevjs/slidev/releases',
+    text: "リリースノート",
+    link: "https://github.com/slidevjs/slidev/releases",
   },
-]
+];
