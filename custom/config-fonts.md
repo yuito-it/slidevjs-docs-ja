@@ -28,7 +28,7 @@ By default, Slidev assumes all the fonts specified via `fonts` configurations co
 ---
 fonts:
   # like font-family in css, you can use `,` to separate multiple fonts for fallback
-  sans: 'Helvetica Neue,Robot'
+  sans: "Helvetica Neue,Robot"
   # mark 'Helvetica Neue' as local font
   local: Helvetica Neue
 ---
@@ -43,7 +43,7 @@ By default, Slidev imports three weights `200`,`400`,`600` for each font. You ca
 fonts:
   sans: Robot
   # default
-  weights: '200,400,600'
+  weights: "200,400,600"
   # import italic fonts, default `false`
   italic: false
 ---
@@ -70,13 +70,30 @@ will result in
 
 ```css
 .font-sans {
-  font-family: "Robot",ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family:
+    "Robot",
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
 }
 .font-serif {
-  font-family: "Robot Slab",ui-serif,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-family: "Robot Slab", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 .font-mono {
-  font-family: "Fira Code",ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  font-family:
+    "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
 }
 ```
 
@@ -85,7 +102,7 @@ If you want to disable the fallback fonts, configure as the following:
 ```yaml
 ---
 fonts:
-  mono: 'Fira Code, monospace'
+  mono: "Fira Code, monospace"
   fallbacks: false
 ---
 ```

@@ -17,7 +17,7 @@ addons: []
 # title of your slide, will inferred from the first header if not specified
 title: Slidev
 # titleTemplate for the webpage, `%s` will be replaced by the slides deck's title
-titleTemplate: '%s - Slidev'
+titleTemplate: "%s - Slidev"
 # information for your slides, can be a Markdown string
 info: false
 # author field for exported PDF or PPTX
@@ -77,10 +77,10 @@ aspectRatio: 16/9
 canvasWidth: 980
 # used for theme customization, will inject root styles as `--slidev-theme-x` for attribute `x`
 themeConfig:
-  primary: '#5d8392'
+  primary: "#5d8392"
 
 # favicon, can be a local file path or URL
-favicon: 'https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/favicon.png'
+favicon: "https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/favicon.png"
 # URL of PlantUML server used to render diagrams
 # Learn more: https://sli.dev/features/plantuml.html
 plantUmlServer: https://www.plantuml.com/plantuml

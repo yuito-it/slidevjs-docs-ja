@@ -95,7 +95,7 @@ You can preview your theme when developing by using a demo slide deck. To do so,
 
 ```md [slides.md]
 ---
-theme: ./  # Use the theme in the current directory
+theme: ./ # Use the theme in the current directory
 ---
 ```
 

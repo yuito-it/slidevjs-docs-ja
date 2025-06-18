@@ -11,28 +11,28 @@ Create `./setup/code-runners.ts` with the following content:
 <!-- eslint-disable import/first -->
 
 ```ts twoslash [setup/code-runners.ts]
-declare const executePythonCodeRemotely: (code: string) => Promise<string>
-declare const sanitizeHtml: (html: string) => string
+declare const executePythonCodeRemotely: (code: string) => Promise<string>;
+declare const sanitizeHtml: (html: string) => string;
 // ---cut---
-import { defineCodeRunnersSetup } from '@slidev/types'
+import { defineCodeRunnersSetup } from "@slidev/types";
 
 export default defineCodeRunnersSetup(() => {
   return {
     async python(code, ctx) {
       // Somehow execute the code and return the result
-      const result = await executePythonCodeRemotely(code)
+      const result = await executePythonCodeRemotely(code);
       return {
-        text: result
-      }
+        text: result,
+      };
     },
     html(code, ctx) {
       return {
-        html: sanitizeHtml(code)
-      }
+        html: sanitizeHtml(code),
+      };
     },
     // or other languages, key is the language id
-  }
-})
+  };
+});
 ```
 
 ## Runner Context
@@ -40,22 +40,22 @@ export default defineCodeRunnersSetup(() => {
 The second argument `ctx` is the runner context, which contains the following properties:
 
 ```ts twoslash
-import type { CodeRunnerOutputs } from '@slidev/types'
-import type { CodeToHastOptions } from 'shiki'
+import type { CodeRunnerOutputs } from "@slidev/types";
+import type { CodeToHastOptions } from "shiki";
 // ---cut---
 export interface CodeRunnerContext {
   /**
    * Options passed to runner via the `runnerOptions` prop.
    */
-  options: Record<string, unknown>
+  options: Record<string, unknown>;
   /**
    * Highlight code with shiki.
    */
-  highlight: (code: string, lang: string, options?: Partial<CodeToHastOptions>) => string
+  highlight: (code: string, lang: string, options?: Partial<CodeToHastOptions>) => string;
   /**
    * Use (other) code runner to run code.
    */
-  run: (code: string, lang: string) => Promise<CodeRunnerOutputs>
+  run: (code: string, lang: string) => Promise<CodeRunnerOutputs>;
 }
 ```
 

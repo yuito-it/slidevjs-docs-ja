@@ -1,20 +1,30 @@
 <script setup lang="ts">
-import type { AddonInfo } from '../../addons'
+import type { AddonInfo } from "../../addons";
 
 defineProps<{
-  addon: AddonInfo
-}>()
+  addon: AddonInfo;
+}>();
 </script>
 
 <template>
-  <a :href="addon.link || addon.repo" class="block flex flex-col !decoration-none !text-unset !cursor-unset !hover:bg-gray-400/10 p-2 rounded-lg transition-all">
+  <a
+    :href="addon.link || addon.repo"
+    class="block flex flex-col !decoration-none !text-unset !cursor-unset !hover:bg-gray-400/10 p-2 rounded-lg transition-all"
+  >
     <div class="flex flex-wrap">
-      <a :href="addon.link || addon.repo" class="font-bold text-lg !text-$vp-c-text-1 !decoration-none">
+      <a
+        :href="addon.link || addon.repo"
+        class="font-bold text-lg !text-$vp-c-text-1 !decoration-none"
+      >
         {{ addon.name }}
       </a>
       <div class="flex-grow" />
       <div class="mb-1 select-none op-80">
-        <span v-for="tag in addon.tags" :key="tag" class="text-xs mx-.5 px-1.5 py-.5 rounded-lg bg-gray-400/40">
+        <span
+          v-for="tag in addon.tags"
+          :key="tag"
+          class="text-xs mx-.5 px-1.5 py-.5 rounded-lg bg-gray-400/40"
+        >
           {{ tag }}
         </span>
       </div>
@@ -31,8 +41,12 @@ defineProps<{
         :href="addon.author.link"
         class="text-current text-sm opacity-60 hover:opacity-100"
         target="_blank"
-      >{{ addon.author.name }}</a>
-      <div v-else class="text-current text-sm opacity-60 hover:opacity-100">
+        >{{ addon.author.name }}</a
+      >
+      <div
+        v-else
+        class="text-current text-sm opacity-60 hover:opacity-100"
+      >
         {{ addon.author.name }}
       </div>
       <div class="flex-auto" />

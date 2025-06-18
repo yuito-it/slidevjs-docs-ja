@@ -56,9 +56,9 @@ your-slidev/
 ```ts
 // styles/index.ts
 
-import './base.css'
-import './code.css'
-import './layouts.css'
+import "./base.css";
+import "./code.css";
+import "./layouts.css";
 ```
 
 Styles will be processed by [UnoCSS](https://unocss.dev/) and [PostCSS](https://postcss.org/), so you can use CSS nesting and [at-directives](https://unocss.dev/transformers/directives#apply) and Nested CSS out-of-box. For example:
@@ -69,16 +69,22 @@ Styles will be processed by [UnoCSS](https://unocss.dev/) and [PostCSS](https://
 .slidev-layout {
   --uno: px-14 py-10 text-[1.1rem];
 
-  h1, h2, h3, h4, p, div {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  div {
     --uno: select-none;
   }
 
-  pre, code {
+  pre,
+  code {
     --uno: select-text;
   }
 
   a {
-    color: theme('colors.primary');
+    color: theme("colors.primary");
   }
 }
 ```
@@ -95,8 +101,14 @@ For example, for the following custom `index.html`:
 
 ```html [index.html]
 <head>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Nunito+Sans:wght@200;400;600&display=swap" rel="stylesheet">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Nunito+Sans:wght@200;400;600&display=swap"
+    rel="stylesheet"
+  />
 </head>
 
 <body>
@@ -109,20 +121,36 @@ The final hosted `index.html` will be:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/favicon.png">
-  <!-- injected head -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Nunito+Sans:wght@200;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div id="app"></div>
-  <script type="module" src="__ENTRY__"></script>
-  <!-- injected body -->
-  <script src="./your-scripts"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/favicon.png"
+    />
+    <!-- injected head -->
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Nunito+Sans:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script
+      type="module"
+      src="__ENTRY__"
+    ></script>
+    <!-- injected body -->
+    <script src="./your-scripts"></script>
+  </body>
 </html>
 ```
 

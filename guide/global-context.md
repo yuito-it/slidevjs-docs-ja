@@ -15,12 +15,8 @@ Current page is: {{ $nav.currentPage }}
 ```vue [Foo.vue]
 <template>
   <div>Title: {{ $slidev.configs.title }}</div>
-  <button @click="$nav.next">
-    Next Click
-  </button>
-  <button @click="$nav.nextSlide">
-    Next Slide
-  </button>
+  <button @click="$nav.next">Next Click</button>
+  <button @click="$nav.nextSlide">Next Slide</button>
 </template>
 ```
 
@@ -32,14 +28,25 @@ If you want to get the context programmatically (also type-safely), you can impo
 
 ```vue
 <script setup>
-import { onSlideEnter, onSlideLeave, useDarkMode, useIsSlideActive, useNav, useSlideContext } from '@slidev/client'
+import {
+  onSlideEnter,
+  onSlideLeave,
+  useDarkMode,
+  useIsSlideActive,
+  useNav,
+  useSlideContext,
+} from "@slidev/client";
 
-const { $slidev } = useSlideContext()
-const { currentPage, currentLayout, currentSlideRoute } = useNav()
-const { isDark } = useDarkMode()
-const isActive = useIsSlideActive()
-onSlideEnter(() => { /* ... */ })
-onSlideLeave(() => { /* ... */ })
+const { $slidev } = useSlideContext();
+const { currentPage, currentLayout, currentSlideRoute } = useNav();
+const { isDark } = useDarkMode();
+const isActive = useIsSlideActive();
+onSlideEnter(() => {
+  /* ... */
+});
+onSlideLeave(() => {
+  /* ... */
+});
 // ...
 </script>
 ```
@@ -80,12 +87,12 @@ See the <LinkInline link="guide/animations" /> guide for more information.
 A reactive object holding the properties and controls of the slide navigation. For examples:
 
 ```js
-$nav.next() // go next step
-$nav.nextSlide() // go next slide (skip clicks)
-$nav.go(10) // go slide #10
+$nav.next(); // go next step
+$nav.nextSlide(); // go next slide (skip clicks)
+$nav.go(10); // go slide #10
 
-$nav.currentPage // current slide number
-$nav.currentLayout // current layout name
+$nav.currentPage; // current slide number
+$nav.currentLayout; // current layout name
 ```
 
 For more properties available, refer to the [`SlidevContextNav` interface](https://github.com/slidevjs/slidev/blob/main/packages/client/composables/useNav.ts).
@@ -140,7 +147,7 @@ A reactive object holding the parsed theme configurations:
 ---
 title: My First Slidev!
 themeConfig:
-  primary: '#213435'
+  primary: "#213435"
 ---
 ```
 

@@ -23,10 +23,10 @@ To configure the built-in plugins listed above, create a `vite.config.ts` with t
 
 ```ts twoslash [vite.config.ts]
 /// <reference types="@slidev/types" />
-import type MarkdownIt from 'markdown-it'
-declare const MyPlugin: (md: any) => void
+import type MarkdownIt from "markdown-it";
+declare const MyPlugin: (md: any) => void;
 // ---cut---
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   slidev: {
@@ -37,12 +37,12 @@ export default defineConfig({
       /* markdown-it options */
       markdownItSetup(md) {
         /* custom markdown-it plugins */
-        md.use(MyPlugin)
+        md.use(MyPlugin);
       },
     },
     /* options for other plugins */
   },
-})
+});
 ```
 
 See the [type declarations](https://github.com/slidevjs/slidev/blob/main/packages/types/src/vite.ts#L11) for more options.
@@ -51,16 +51,16 @@ See the [type declarations](https://github.com/slidevjs/slidev/blob/main/package
 It is not allowed to re-add plugins that has been used internally be Slidev. For example, instead of
 
 ```ts twoslash
-import Vue from '@vitejs/plugin-vue'
-import { defineConfig } from 'vite'
+import Vue from "@vitejs/plugin-vue";
+import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [
     Vue({
       /* vue options */
-    })
+    }),
   ],
-})
+});
 ```
 
 Please pass the Vue options to the `slidev.vue` field as described above
@@ -72,12 +72,12 @@ Usually you can add Vite plugins into your `vite.config.ts` (see above).
 However, if you want to add plugins based on the slide data, you need to add a `./setup/vite-plugins.ts` with the following content:
 
 ```ts twoslash
-import { defineVitePluginsSetup } from '@slidev/types'
+import { defineVitePluginsSetup } from "@slidev/types";
 
 export default defineVitePluginsSetup((options) => {
   return [
     // Your plugins here
     // Slide data is available as options.data.slides
-  ]
-})
+  ];
+});
 ```

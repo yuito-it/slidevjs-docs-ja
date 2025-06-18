@@ -24,7 +24,7 @@ Hello, **Slidev**!
 Use code blocks for highlighting:
 
 ```ts
-console.log('Hello, World!')
+console.log("Hello, World!");
 ```
 
 ---
@@ -55,9 +55,11 @@ title: Welcome to Slidev
 The frontmatter of this slide is also the headmatter
 
 ---
+
 layout: center
 background: /background-1.png
 class: text-white
+
 ---
 
 # Slide 2
@@ -71,8 +73,8 @@ A page with the layout `center` and a background image
 A page without frontmatter
 
 ---
-src: ./pages/4.md  # This slide only contains a frontmatter
----
+
+## src: ./pages/4.md # This slide only contains a frontmatter
 
 ---
 
@@ -131,7 +133,7 @@ One big reason that led to the creation of Slidev was the need to perfectly disp
 
 ````md
 ```ts
-console.log('Hello, World!')
+console.log("Hello, World!");
 ```
 ````
 

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { Feature } from '../../../features/index.data'
-import { withBase } from 'vitepress'
+import type { Feature } from "../../../features/index.data";
+import { withBase } from "vitepress";
 
 defineProps<{
-  features: Feature[]
-}>()
+  features: Feature[];
+}>();
 </script>
 
 <template>
@@ -12,14 +12,41 @@ defineProps<{
     <a
       v-for="feature in features"
       :key="feature.name"
-      flex flex-col h-full p4 gap-3 rounded-md
+      flex
+      flex-col
+      h-full
+      p4
+      gap-3
+      rounded-md
       :href="withBase(feature.link)"
     >
-      <div font-bold text-wrap leading-5> {{ feature.title }} </div>
-      <div text-wrap leading-5 op-75 overflow-hidden text-sm> {{ feature.description }} </div>
+      <div
+        font-bold
+        text-wrap
+        leading-5
+      >
+        {{ feature.title }}
+      </div>
+      <div
+        text-wrap
+        leading-5
+        op-75
+        overflow-hidden
+        text-sm
+      >
+        {{ feature.description }}
+      </div>
       <div flex-grow />
-      <div flex gap-1 pointer-events-auto>
-        <FeatureTag v-for="tag in feature.tags" :key="tag" :tag />
+      <div
+        flex
+        gap-1
+        pointer-events-auto
+      >
+        <FeatureTag
+          v-for="tag in feature.tags"
+          :key="tag"
+          :tag
+        />
       </div>
     </a>
   </div>

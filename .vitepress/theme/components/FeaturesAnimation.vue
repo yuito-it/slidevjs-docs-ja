@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Inner from './FeaturesAnimationInner.vue'
+import Inner from "./FeaturesAnimationInner.vue";
 </script>
 
 <template>
@@ -8,6 +8,4 @@ import Inner from './FeaturesAnimationInner.vue'
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

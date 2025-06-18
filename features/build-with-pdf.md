@@ -26,7 +26,7 @@ You can also provide a custom URL for the PDF. In that case, the rendering proce
 
 ```md
 ---
-download: 'https://myside.com/my-talk.pdf'
+download: "https://myside.com/my-talk.pdf"
 ---
 ```
 

@@ -202,7 +202,7 @@ level: 2
 The `<TitleRenderer>` component is a virtual component you can import with:
 
 ```js
-import TitleRenderer from '#slidev/title-renderer'
+import TitleRenderer from "#slidev/title-renderer";
 ```
 
 Then you can use it with:

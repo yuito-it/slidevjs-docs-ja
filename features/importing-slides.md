@@ -20,8 +20,8 @@ You can split your `slides.md` into multiple files for better reusability and or
 This is a normal page
 
 ---
-src: ./pages/toc.md // [!code highlight]
----
+
+## src: ./pages/toc.md // [!code highlight]
 
 <!-- this page will be loaded from './pages/toc.md' -->
 
@@ -34,8 +34,8 @@ Contents here are ignored
 Another normal page
 
 ---
-src: ./pages/toc.md   # Reuse the same file // [!code highlight]
----
+
+## src: ./pages/toc.md # Reuse the same file // [!code highlight]
 ```
 
 ```md [./pages/toc.md]

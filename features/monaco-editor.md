@@ -17,7 +17,7 @@ Whenever you want to do some modification in the presentation, simply add `{mona
 
 ````md
 ```ts {monaco}
-console.log('HelloWorld')
+console.log("HelloWorld");
 ```
 ````
 
@@ -29,8 +29,7 @@ Monaco can also generate a diff between two code blocks. Use `{monaco-diff}` to 
 
 ````md
 ```ts {monaco-diff}
-console.log('Original text')
-~~~
-console.log('Modified text')
+console.log("Original text");
+~~~console.log("Modified text");
 ```
 ````

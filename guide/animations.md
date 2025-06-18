@@ -22,6 +22,7 @@ To apply show/hide "click animations" for elements, you can use the `<v-click>` 
 ```md
 <!-- Component usage:
      this will be invisible until you press "next" -->
+
 <v-click> Hello World! </v-click>
 
 <!-- Directive usage:
@@ -117,8 +118,8 @@ This actual position of relative elements is calculated based on the previous re
 <div v-click.hide="'-1'"> hidden after 2 clicks </div>
 
 ```js {none|1|2}{at:'+5'}
-1  // highlighted after 7 clicks
-2  // highlighted after 8 clicks
+1; // highlighted after 7 clicks
+2; // highlighted after 8 clicks
 ```
 ````
 
@@ -160,8 +161,8 @@ The given value is the exact click count to trigger this animation:
 <div v-click.hide="1"> hidden after 1 click </div>
 
 ```js {none|1|2}{at:3}
-1  // highlighted after 3 clicks
-2  // highlighted after 4 clicks
+1; // highlighted after 3 clicks
+2; // highlighted after 4 clicks
 ```
 ````
 
@@ -181,8 +182,8 @@ The following example synchronizes the highlighting of the two code blocks:
 
 ````md {1,6}
 ```js {1|2}{at:1}
-1 + 1
-'a' + 'b'
+1 + 1;
+"a" + "b";
 ```
 
 ```js {1|2}{at:1}
@@ -330,7 +331,9 @@ You can also trigger the motion by clicks:
 Or combine `v-click` with `v-motion`:
 
 ```html
-<div v-click="[2, 4]" v-motion
+<div
+  v-click="[2, 4]"
+  v-motion
   :initial="{ x: -50 }"
   :enter="{ x: 0 }"
   :leave="{ x: 50 }"

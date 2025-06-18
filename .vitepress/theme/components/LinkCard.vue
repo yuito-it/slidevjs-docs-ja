@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { withBase } from 'vitepress'
-import { computed } from 'vue'
-import { resolveLink } from '../../utils'
+import { withBase } from "vitepress";
+import { computed } from "vue";
+import { resolveLink } from "../../utils";
 
 const props = defineProps<{
-  link: string
-}>()
+  link: string;
+}>();
 
-const resolved = computed(() => resolveLink(props.link))
+const resolved = computed(() => resolveLink(props.link));
 </script>
 
 <template>
@@ -15,12 +15,22 @@ const resolved = computed(() => resolveLink(props.link))
     {{ resolved.title }}
   </div>
   <ClientOnly>
-    <a class="link-card" :href="withBase(resolved.url)">
+    <a
+      class="link-card"
+      :href="withBase(resolved.url)"
+    >
       <div class="title">
         <div>{{ resolved.title }}</div>
         <div flex-grow />
-        <div flex gap-1>
-          <FeatureTag v-for="tag in resolved.tags" :key="tag" :tag />
+        <div
+          flex
+          gap-1
+        >
+          <FeatureTag
+            v-for="tag in resolved.tags"
+            :key="tag"
+            :tag
+          />
         </div>
       </div>
       <div class="description">
@@ -32,7 +42,7 @@ const resolved = computed(() => resolveLink(props.link))
 
 <style scoped>
 .link-card {
-  --uno: 'block my-4 pl-8 pr-6 py-6 rounded-lg bg-$vp-c-bg-soft flex flex-col gap-2';
+  --uno: "block my-4 pl-8 pr-6 py-6 rounded-lg bg-$vp-c-bg-soft flex flex-col gap-2";
   border: 2px solid var(--vp-c-bg-soft);
   transition:
     color 0.5s,

@@ -48,10 +48,7 @@ export default defineConfig({
     ],
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
     ["meta", { name: "twitter:creator", content: "@slidevjs" }],
-    [
-      "meta",
-      { name: "twitter:image", content: "https://sli.dev/og-image.png" },
-    ],
+    ["meta", { name: "twitter:image", content: "https://sli.dev/og-image.png" }],
     ["link", { rel: "dns-prefetch", href: "https://fonts.gstatic.com" }],
     [
       "link",
@@ -75,14 +72,7 @@ export default defineConfig({
       dark: "vitesse-dark",
     },
     async shikiSetup(shiki) {
-      await shiki.loadLanguage(
-        "html",
-        "xml",
-        "vue",
-        "markdown",
-        "mermaid",
-        "latex"
-      );
+      await shiki.loadLanguage("html", "xml", "vue", "markdown", "mermaid", "latex");
     },
     codeTransformers: [
       transformerTwoslash({
