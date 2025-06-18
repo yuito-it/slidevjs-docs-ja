@@ -74,8 +74,8 @@ function play() {
       setTimeout(() => (completed.value = true), 300);
     },
   })
-    .type('<br><span class="token title"># Welcome to Slidev!</span><br><br>', { delay: 400 })
-    .type("Presentation Slides for Developers", { delay: 400 })
+    .type('<br><span class="token title"># Slidevへようこそ！</span><br><br>', { delay: 400 })
+    .type("開発者のためのプレゼンテーションスライド", { delay: 400 })
     .move(null, { to: "START", speed: 0 })
     .type("<br>")
     .move(null, { to: "START" })
@@ -101,10 +101,10 @@ function play() {
     .type('<br><br><span class="token punctuation">---</span><br><br>', { delay: 400 })
     .exec(resume)
     .exec(() => setTimeout(() => (page.value = 1)))
-    .type('<span class="token title"># Page 2</span><br><br>', { delay: 400 })
-    .type("- 📄 Write slides in a single Markdown file<br>", { delay: 800 })
-    .type("- 🌈 Themes, code blocks, interactive components<br>", { delay: 800 })
-    .type("- 😎 Read the docs to learn more!", { delay: 800 })
+    .type('<span class="token title"># 2ページ目</span><br><br>', { delay: 400 })
+    .type("- 📄 1つのMarkdownファイルでスライド作成<br>", { delay: 800 })
+    .type("- 🌈 テーマ、コードブロック、インタラクティブなコンポーネント<br>", { delay: 800 })
+    .type("- 😎 詳しくはドキュメントをチェックしてください！", { delay: 800 })
     .exec(() => setTimeout(() => (page.value = 0)))
     .go();
 }
@@ -120,7 +120,7 @@ onMounted(play);
       <div
         v-if="completed"
         class="absolute text-xs right-1 top-1 icon-btn opacity-50"
-        title="Replay"
+        title="リプレイ"
         @click="play()"
       >
         <div class="i-carbon:reset" />
